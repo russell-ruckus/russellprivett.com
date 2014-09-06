@@ -1,0 +1,465 @@
+/*-------------------------
+	Fonts
+--------------------------*/
+
+
+
+
+
+
+
+
+/*-------------------------
+	Icons
+--------------------------*/
+
+
+
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+body {
+	font-family: "brandon-grotesque", sans-serif;
+	background-color: #fff;
+}
+
+main section, footer, header, main {
+	display: block;
+}
+
+main section, footer {
+	padding: 5rem 0 2rem;
+}
+
+h2, h3, h4 {
+	text-transform: uppercase;
+	color: #110f0f;
+}
+
+h2 {
+	font-family: "brandon-grotesque",sans-serif;
+	font-weight: 500;
+	font-size: 2.4rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+	font-family: "brandon-grotesque",sans-serif;
+	font-weight: 500;
+	line-height: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+p {
+	font-size: 1.2rem;
+	color: #110f0f;
+}
+
+img {
+	width: 100%;
+}
+
+::selection, ::-moz-selection {
+	background: #ff5e3a;
+	color: #fff;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.extra-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+
+
+/*-------------------------
+	MAIN NAV
+--------------------------*/
+
+.top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button) {
+	background: transparent;
+}
+
+.top-bar-section ul li > a {
+	font-size: 1rem;
+}
+
+
+/*-------------------------
+	MENU ICON
+--------------------------*/
+
+.top-bar .toggle-topbar.menu-icon a {
+	padding-right: 0;
+}
+
+.top-bar .toggle-topbar.menu-icon a div {
+	width: 24px;
+	height: 4px;
+	margin: 10px 0;
+	background: #fff;
+}
+
+.top-bar .toggle-topbar.menu-icon a div:before, .menu-icon a div:before {
+	top: -8px;
+}
+
+.top-bar .toggle-topbar.menu-icon a div:after, .menu-icon a div:after {
+	top: 8px;
+	-webkit-box-shadow: inherit;
+	box-shadow: none;
+}
+
+.top-bar .toggle-topbar.menu-icon a:after {
+	-webkit-box-shadow: inherit;
+	box-shadow: none;
+}
+
+.top-bar .toggle-topbar.menu-icon a div:before, .top-bar .toggle-topbar.menu-icon a div:after, .menu-icon a div:before, .menu-icon a div:after { 
+	content: '';
+	display: block;
+	width: 24px;
+	height: 4px;
+	background: #fff;
+	position: absolute;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.top-bar.expanded .toggle-topbar.menu-icon a div {
+	background: none;
+}
+
+.top-bar.expanded .toggle-topbar.menu-icon a div:before {
+	top: 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.top-bar.expanded .toggle-topbar.menu-icon a div:after {
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* FILTER NAV CLOSE ICON */
+
+.filter-nav .menu-icon {
+	position: absolute;
+	right: 15px;
+	top: 1.5rem;
+}
+
+.filter-nav .menu-icon a {
+	display: block;
+	height: 34px;
+	line-height: 34px;
+}
+
+.filter-nav .menu-icon a div {
+	width: 24px;
+	height: 24px;
+	margin: -12px 0 0;
+}
+
+.filter-nav .menu-icon a div:before {
+	top: 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.filter-nav .menu-icon a div:after {
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+
+
+
+/*--------------------------------
+	WORK LINKS FILTER NAVIGATION
+----------------------------------*/
+
+.filter-nav {
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background: none;
+}
+
+.filter-nav div {
+	opacity: 0;
+}
+
+.filter-nav ul {
+	list-style: none;
+	margin: 25% 0 0;
+}
+
+.filter-nav li {
+	font-size: 2rem;
+}
+
+.filter-nav li a {
+	color: #110f0f;
+	display: block;
+}
+
+.filter-nav li a:hover {
+	background: none;
+	color: #ff5e3a;
+}
+
+.filter-nav li a.current, .filter-nav li a:hover.current {
+	color: #ff5e3a;
+	background: none;
+	cursor: default;
+	pointer-events: none;
+}
+
+.filter-nav.expanded {
+	background-color: #f0f0f0;
+	visibility: visible;
+}
+
+.filter-nav.expanded div {
+	opacity: 1;
+}
+
+.filter-toggle {
+	position: relative;
+	font-size: 1.3rem;
+	color: #110f0f;
+	padding-bottom: .5rem;
+	margin-bottom: 4rem;
+}
+
+.filter-toggle a {
+	font-size: 1rem;
+	color: #6f6f6f;
+	text-transform: uppercase;
+}
+
+.filter-toggle a:before {
+	content: 'SHOWING: ';
+}
+
+/* triangle icon */
+
+.filter-toggle:after,
+.filter-toggle:before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    bottom: -10px;
+    content: '';
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+}
+
+.filter-toggle:before {
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid;
+    border-top-color: #6f6f6f;
+    bottom: -13px;
+    margin-left: -13px;
+}
+
+
+
+
+
+/*-------------------------
+	HEADER
+--------------------------*/
+
+header {
+	height: 100%; width: 100%;
+	position:relative;
+	overflow: hidden;
+	background-color: #110f0f;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+header:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+
+
+
+/*-------------------------
+	THE MAIN CONTAINER
+--------------------------*/
+
+.p-link {
+	display: block;
+	width: 100%; height: 300px;
+}
+
+.p-link .title {
+	display: block;
+	height: 100px;
+	margin: auto 0;
+}
+
+
+/*-------------------------
+	The footer
+--------------------------*/
+
+footer {
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	background-color: #ff5e3a;
+	border-bottom: none;
+}
+
+.contact-details a {
+	font-size: 1.5rem;
+	color: #110f0f;
+}
+
+.contact-details ul {
+	list-style: none;
+}
+
+.social a {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	margin: 10px 0 5px;
+	background: #000;
+	border: 1px #000 solid;
+}
+
+.social a:before {
+	font-size: 25px;
+	line-height: 70px;
+}
+
+
+/*-------------------------
+	MEDIUM
+--------------------------*/
+
+@media only screen and (min-width: 40.063em) {
+	
+	}
+
+/*-------------------------
+	MEDIUM - LARGE
+--------------------------*/
+
+@media only screen and (min-width: 52.063em) {
+
+	
+}
+
+
+
+/*-------------------------
+	LARGE
+--------------------------*/
+
+@media only screen and (min-width: 64.063em) {
+	
+	
+}
+
+/*-------------------------
+	EXTRA - LARGE
+--------------------------*/
+
+@media only screen and (min-width: 90.063em) {
+	
+}
+
+
+
+
+
+
+/*-------------------------
+	ANIMATIONS
+--------------------------*/
+
+.animation-all {
+	-webkit-transition: all .2s 0 ease-in-out;
+	-moz-transition: all .2s 0s ease-in-out;
+	-ms-transition: all .2s 0 ease-in-out;
+	-o-transition: all .2s 0 ease-in-out;
+	transition: all .2s 0s ease-in-out;
+}
+
+.animation-all-slow {
+	-webkit-transition: all .6s 0 ease-in-out;
+	-moz-transition: all .6s 0s ease-in-out;
+	-ms-transition: all .6s 0 ease-in-out;
+	-o-transition: all .6s 0 ease-in-out;
+	transition: all .6s 0s ease-in-out;
+}
+
+.animation-bgColor {
+	-webkit-transition: background-color .2s 0 ease-in-out;
+	-moz-transition: background-color .2s 0s ease-in-out;
+	-ms-transition: background-color .2s 0 ease-in-out;
+	-o-transition: background-color .2s 0 ease-in-out;
+	transition: background-color .2s 0s ease-in-out;
+}
+
+.animation-border {
+	-webkit-transition: border .2s 0 ease-in-out;
+	-moz-transition: border .2s 0 ease-in-out;
+	-o-transition: border .2s 0 ease-in-out;
+	transition: border .2s 0 ease-in-out;
+}
