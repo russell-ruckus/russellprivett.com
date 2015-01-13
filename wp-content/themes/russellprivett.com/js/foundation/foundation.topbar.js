@@ -96,9 +96,9 @@
 
       var section = self.S('section, .top-bar-section', topbar);
 
-      if (self.breakpoint()) {
+      
         if (!self.rtl) {
-          section.css({left: '0%'});
+          section.css({left: '5%'});
           $('>.name', section).css({left: '100%'});
         } else {
           section.css({right: '0%'});
@@ -111,7 +111,7 @@
         topbar
           .toggleClass('expanded')
           .css('height', '');
-      }
+      
 
       if (settings.scrolltop) {
         if (!topbar.hasClass('expanded')) {
